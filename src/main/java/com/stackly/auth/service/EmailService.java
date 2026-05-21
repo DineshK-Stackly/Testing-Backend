@@ -58,7 +58,7 @@ public class EmailService {
             }
           ],
           "subject": "OTP Verification",
-          "htmlContent": "<h3>Your OTP is: %s \nValid for 5 minutes.</h3>"
+          "htmlContent": "<h3>Your OTP is: %s Valid for 5 minutes.</h3>"
         }
         """.formatted(toEmail, otp);
 
