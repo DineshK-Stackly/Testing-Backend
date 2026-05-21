@@ -61,7 +61,7 @@ public class AuthServiceImpl implements IAuthService {
         otpService.saveSignupData(request.getEmail(), request, otp);
 
         // 4. Send the Email
-        emailService.sendOtp(request.getEmail(), otp);
+        emailService.sendEmail(request.getEmail(), otp);
 
         return "OTP_SENT";
     }
@@ -102,7 +102,7 @@ public class AuthServiceImpl implements IAuthService {
 
         String otp = emailService.generateOTP();
         otpService.storeOtp(email, otp);
-        emailService.sendOtp(email, otp);
+        emailService.sendEmail(email, otp);
 		return "OTP_SENT";
 	}
 
@@ -145,7 +145,7 @@ public class AuthServiceImpl implements IAuthService {
 
         String otp = String.format("%06d", new Random().nextInt(999999));
         otpService.storeOtp(email, otp);
-        emailService.sendOtp(email, otp);
+        emailService.sendEmail(email, otp);
 
         return "OTP_SENT";
 	}
@@ -197,7 +197,7 @@ public class AuthServiceImpl implements IAuthService {
 
         String otp = String.format("%06d", new Random().nextInt(999999));
         otpService.storeOtp(email, otp);
-        emailService.sendOtp(email, otp);
+        emailService.sendEmail(email, otp);
         return "OTP_RESENT";
 	}
 
