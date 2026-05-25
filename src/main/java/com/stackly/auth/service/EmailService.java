@@ -50,7 +50,7 @@ public class EmailService {
         {
           "sender": {
             "name": "Stackly",
-            "email": "your_verified_email@gmail.com"
+            "email": "dineshkumarkrr777@gmail.com"
           },
           "to": [
             {
